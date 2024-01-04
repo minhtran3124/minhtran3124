@@ -63,26 +63,6 @@
 
 <br>
 
-
-## Github Stats
-<br>
-
-<div align="left">
-
-<a href="https://github.com/minhtran3124/">
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=minhtran3124"/>
-</a>
-
-<a href="https://github.com/minhtran3124/">
-<img src="https://github-readme-stats.vercel.app/api?username=minhtran3124"/>
-</a>
-
-</div>
-<br>
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-<br>
-
 ## Let's Connect..!
 <br>
 
