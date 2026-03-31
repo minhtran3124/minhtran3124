@@ -1,34 +1,25 @@
 
 <div align="left">
-<table border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td width="60%" valign="top">
-      <h1>Hi there, I am Minh Tran 👋</h1>
-      <a href="https://github.com/minhtran3124"><img src="https://img.shields.io/badge/minhtran3124-00acee.svg?color=1e90ff&style=for-the-badge&logo=github&logoColor=white" alt="github" style="margin-bottom: 5px;"/></a>
-      <a href="mailto:tranhuuminh3124@gmail.com"><img src="https://img.shields.io/badge/tranhuuminh3124@gmail.com-EA4335.svg?style=for-the-badge&logo=gmail&logoColor=white" alt="gmail" style="margin-bottom: 5px;" /></a>
-      <br/><br/>
-      <ul>
-        <li>🎯 <b>Current position:</b> BE position and Devops role</li>
-        <li>📫 <b>How to reach me:</b> <a href="mailto:trahuuminh3124@gmail.com">trahuuminh3124@gmail.com</a></li>
-        <li>⚡ <b>Fun fact:</b> Food and Music🎵 are the reasons to live.</li>
-      </ul>
-      <br/>
-      <h3>💾 Things I love</h3>
-      <ul>
-        <li>Python 🐍</li>
-        <li>Backend Development ✍️</li>
-        <li>DevOps 🚀</li>
-        <li>Cloud Infrastructure ☁️</li>
-      </ul>
-    </td>
-    <td width="40%" align="right" valign="top">
-      <img src="https://github-readme-stats.vercel.app/api?username=minhtran3124&show_icons=true&theme=tokyonight" width="400" />
-    </td>
-  </tr>
-</table>
+  <h1>Hi there, I am Minh Tran 👋</h1>
+  <a href="https://github.com/minhtran3124"><img src="https://img.shields.io/badge/minhtran3124-00acee.svg?color=1e90ff&style=for-the-badge&logo=github&logoColor=white" alt="github" style="margin-bottom: 5px;"/></a>
+  <a href="mailto:tranhuuminh3124@gmail.com"><img src="https://img.shields.io/badge/tranhuuminh3124@gmail.com-EA4335.svg?style=for-the-badge&logo=gmail&logoColor=white" alt="gmail" style="margin-bottom: 5px;" /></a>
+  <br/><br/>
+  <ul>
+    <li>🎯 <b>Current position:</b> BE position and Devops role</li>
+    <li>📫 <b>How to reach me:</b> <a href="mailto:trahuuminh3124@gmail.com">trahuuminh3124@gmail.com</a></li>
+    <li>⚡ <b>Fun fact:</b> Food and Music🎵 are the reasons to live.</li>
+  </ul>
+  <br/>
+  <h3>💾 Things I love</h3>
+  <ul>
+    <li>Python 🐍</li>
+    <li>Backend Development ✍️</li>
+    <li>DevOps 🚀</li>
+    <li>Cloud Infrastructure ☁️</li>
+  </ul>
 </div>
 
-<br/>
+<br/
 
 ### 🛠 Tech Stack
 
