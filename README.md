@@ -19,7 +19,7 @@
   </ul>
 </div>
 
-<br/
+<br/>
 
 ### 🛠 Tech Stack
 
