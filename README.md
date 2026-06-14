@@ -1,78 +1,157 @@
+<div align="center">
 
-<div align="left">
-  <h1>Hi there, I am Minh Tran 👋</h1>
-  <a href="https://github.com/minhtran3124"><img src="https://img.shields.io/badge/minhtran3124-00acee.svg?color=1e90ff&style=for-the-badge&logo=github&logoColor=white" alt="github" style="margin-bottom: 5px;"/></a>
-  <a href="mailto:tranhuuminh3124@gmail.com"><img src="https://img.shields.io/badge/tranhuuminh3124@gmail.com-EA4335.svg?style=for-the-badge&logo=gmail&logoColor=white" alt="gmail" style="margin-bottom: 5px;" /></a>
-  <br/><br/>
-  <ul>
-    <li>🎯 <b>Current position:</b> BE position and Devops role</li>
-    <li>📫 <b>How to reach me:</b> <a href="mailto:trahuuminh3124@gmail.com">trahuuminh3124@gmail.com</a></li>
-    <li>⚡ <b>Fun fact:</b> Food and Music🎵 are the reasons to live.</li>
-  </ul>
-  <br/>
-  <h3>💾 Things I love</h3>
-  <ul>
-    <li>Python 🐍</li>
-    <li>Backend Development ✍️</li>
-    <li>DevOps 🚀</li>
-    <li>Cloud Infrastructure ☁️</li>
-    <li>Agentic AI Engineering 🤖</li>
-  </ul>
+<a href="https://github.com/minhtran3124">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1200&color=1E90FF&center=true&vCenter=true&width=620&height=70&lines=Hi%2C+I'm+Minh+Tran+%F0%9F%91%8B;Backend+Engineer+%E2%86%92+DevOps+%E2%86%92+Agentic+AI;I+build+systems+that+ship+themselves." alt="Minh Tran" />
+</a>
+
+<p>
+  <em>From REST APIs &amp; cloud infrastructure to autonomous agents that carry a change from brainstorm to ship.</em>
+</p>
+
+<a href="https://github.com/minhtran3124"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="github"/></a>
+<a href="https://www.linkedin.com/in/minh-tran-787097125/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"/></a>
+<a href="mailto:tranhuuminh3124@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="email"/></a>
+<a href="https://minhtran3124.github.io/minhtran3124/"><img src="https://img.shields.io/badge/Live%20CV-1E90FF?style=for-the-badge&logo=readthedocs&logoColor=white" alt="cv"/></a>
+
 </div>
 
-<br/>
+---
+
+### 👋 About me
+
+```python
+class MinhTran:
+    role        = "Backend & DevOps Engineer · Agentic AI Builder"
+    location    = "🌏 Vietnam"
+    focus_2026  = ["agent harnesses", "Claude Code skills", "MCP tooling"]
+    foundation  = ["FastAPI", "Django", "AWS", "Kubernetes", "CI/CD"]
+    fun_fact    = "Food and Music 🎵 are the reasons to live."
+```
+
+I started in **backend** (Python web APIs), grew into **DevOps & cloud** (AWS, containers, load-testing at scale), and I'm now spending most of my time on **agentic AI engineering** — building the prompt-programs, harnesses, and guardrails that let coding agents do real work safely.
+
+---
+
+### 🧭 The Journey
+
+| Era | What I was building | Stack |
+|-----|--------------------|-------|
+| **🐍 Backend** | REST APIs, auth, payments, data pipelines | FastAPI · Django · Flask · PostgreSQL · Redis |
+| **🚀 DevOps & Cloud** | Blue-green deploys, CI/CD, load-testing clusters | AWS ECS/EKS · Docker · Kubernetes · Locust · Helm |
+| **🤖 Agentic AI** *(now)* | Skill harnesses, multi-agent research, MCP servers | Claude Code · LangChain · LangGraph · MCP · RAG |
+
+---
 
 ### 🛠 Tech Stack
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
-  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
-</p>
+**Languages**
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
-</p>
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
 
-<p align="left">
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-</p>
+**Backend & Data**
 
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
+**DevOps & Cloud**
+
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-web-services&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Helm](https://img.shields.io/badge/Helm-0F1689?style=for-the-badge&logo=helm&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+
+**Agentic AI**
+
+![Claude](https://img.shields.io/badge/Claude_Code-191919?style=for-the-badge&logo=anthropic&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=langgraph&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-191919?style=for-the-badge&logo=anthropic&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG_·_pgvector-764ABC?style=for-the-badge&logo=databricks&logoColor=white)
+
+---
+
+### 🚀 Featured Projects
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 🤖 [agent-harness](https://github.com/minhtran3124/agent-harness)
+Risk-gated **/skills for Claude Code** — 14 invocable skills that carry a change from *brainstorm → ship*, with a harness deciding how careful to be at every step.
 <br/>
+`Python` · `Claude Code` · `prompt-engineering` ⭐
 
-### 🤖 Agentic AI Engineering
+</td>
+<td width="50%" valign="top">
 
-<p align="left">
-  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" />
-  <img src="https://img.shields.io/badge/Anthropic-191919?style=for-the-badge&logo=anthropic&logoColor=white" />
-  <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
-  <img src="https://img.shields.io/badge/CrewAI-FF6F00?style=for-the-badge&logo=ai&logoColor=white" />
-</p>
-
-<p align="left">
-  <img src="https://img.shields.io/badge/RAG-764ABC?style=for-the-badge&logo=databricks&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vector_DB-4285F4?style=for-the-badge&logo=pinecone&logoColor=white" />
-  <img src="https://img.shields.io/badge/MCP-191919?style=for-the-badge&logo=anthropic&logoColor=white" />
-  <img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" />
-</p>
-
+#### 🧠 [chat-agents](https://github.com/minhtran3124/chat-agents)
+**Deep Agents Research Assistant** — LangChain Deep Agents demo surfacing planning, subagent spawning & memory on a **live dashboard**.
 <br/>
+`Python` · `LangChain` · `multi-agent`
 
-<h3 align="center">Show some ❤️ by starring some of the repositories!</h3>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### ✈️ [travel-pi](https://github.com/minhtran3124/travel-pi)
+**Travel Planner API** — a clean FastAPI booking backend (flights, hotels, bookings) built for frontends to develop against.
+<br/>
+`Python` · `FastAPI` · `uv`
+
+</td>
+<td width="50%" valign="top">
+
+#### 🔄 [aws-ecs-green-blue-deployment](https://github.com/minhtran3124/aws-ecs-green-blue-deployment)
+Zero-downtime **blue/green deployments** on AWS ECS — the DevOps playbook for shipping without flinching.
+<br/>
+`AWS` · `ECS` · `CI/CD`
+
+</td>
+</tr>
+</table>
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/minh-tran-787097125/" target="_blank">
-    <img src="https://img.shields.io/badge/linkedin:minhtran3124-%2300acee.svg?color=405DE6&style=for-the-badge&logo=linkedin&logoColor=white" alt=linkedin style="margin-bottom: 5px;"/>
-  </a>
+  <a href="https://github.com/minhtran3124?tab=repositories&type=source"><b>→ Browse all 49 repositories</b></a>
+</div>
+
+---
+
+### 📊 GitHub Stats
+
+<div align="center">
+
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=minhtran3124&show_icons=true&hide_border=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="stats" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=minhtran3124&layout=compact&hide_border=true&theme=tokyonight&langs_count=8" alt="top langs" />
+
+<br/>
+
+<img src="https://streak-stats.demolab.com?user=minhtran3124&hide_border=true&theme=tokyonight" alt="streak" />
+
+<br/>
+
+<img src="https://github-profile-trophy.vercel.app/?username=minhtran3124&theme=tokyonight&no-frame=true&column=7&margin-w=8" alt="trophies" />
+
+</div>
+
+---
+
+<div align="center">
+
+### 🌟 Show some love by starring a repo!
+
+<a href="https://www.linkedin.com/in/minh-tran-787097125/"><img src="https://img.shields.io/badge/Let's%20connect%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"/></a>
+
+<sub>⚡ Built systems that scale · now building agents that build.</sub>
+
 </div>
