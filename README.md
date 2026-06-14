@@ -138,10 +138,6 @@ Zero-downtime **blue/green deployments** on AWS ECS — the DevOps playbook for 
 
 <img src="https://streak-stats.demolab.com?user=minhtran3124&hide_border=true&theme=tokyonight" alt="streak" />
 
-<br/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=minhtran3124&theme=tokyonight&no-frame=true&column=7&margin-w=8" alt="trophies" />
-
 </div>
 
 ---
