@@ -1,0 +1,4 @@
+# Local Claude Code agent tooling / config — not part of the public profile
+.claude/
+.mcp.json
+.vercel

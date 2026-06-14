@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Minh Tran — Backend · DevOps · Agentic AI</title>
+<meta name="description" content="Minh Tran — Backend &amp; DevOps engineer building agentic AI tooling. FastAPI, AWS, Kubernetes, Claude Code, LangChain, MCP." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0a0e16;
+    --bg-soft: #0f1521;
+    --panel: #141b2b;
+    --border: #1f2a3d;
+    --text: #e6edf6;
+    --muted: #8b9bb4;
+    --accent: #1e90ff;
+    --accent-2: #38e8c5;
+    --accent-3: #a779ff;
+    --glow: rgba(30,144,255,.35);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Sora', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+  /* animated aurora background */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+      radial-gradient(60% 50% at 15% 0%, rgba(30,144,255,.18), transparent 60%),
+      radial-gradient(50% 45% at 90% 10%, rgba(167,121,255,.16), transparent 60%),
+      radial-gradient(55% 50% at 70% 95%, rgba(56,232,197,.12), transparent 60%);
+    animation: drift 18s ease-in-out infinite alternate;
+  }
+  @keyframes drift {
+    from { transform: translate3d(0,0,0) scale(1); }
+    to   { transform: translate3d(0,-3%,0) scale(1.08); }
+  }
+  .grid-overlay {
+    position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(circle at 50% 25%, black, transparent 75%);
+    opacity: .25;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+  code, .mono { font-family: 'Fira Code', monospace; }
+
+  /* ---------- nav ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(12px);
+    background: rgba(10,14,22,.7);
+    border-bottom: 1px solid var(--border);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brand { font-weight: 700; letter-spacing: .5px; }
+  .brand span { color: var(--accent); }
+  .nav-links { display: flex; gap: 22px; }
+  .nav-links a {
+    color: var(--muted); text-decoration: none; font-size: .9rem;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+  @media (max-width: 640px){ .nav-links { display: none; } }
+
+  /* ---------- hero ---------- */
+  header.hero { padding: 90px 0 70px; text-align: center; position: relative; }
+  .avatar {
+    width: 118px; height: 118px; border-radius: 50%;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 0 6px rgba(30,144,255,.08), 0 0 40px var(--glow);
+    margin-bottom: 26px;
+    animation: float 6s ease-in-out infinite;
+  }
+  @keyframes float { 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-10px);} }
+  .hero h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); font-weight: 800; letter-spacing: -1px; }
+  .hero h1 .grad {
+    background: linear-gradient(100deg, var(--accent), var(--accent-2) 60%, var(--accent-3));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .typed-line {
+    font-family: 'Fira Code', monospace; color: var(--accent-2);
+    font-size: clamp(.95rem, 2.6vw, 1.25rem); margin-top: 14px; min-height: 1.6em;
+  }
+  .typed-line .cursor { color: var(--accent); animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .tagline { color: var(--muted); max-width: 620px; margin: 18px auto 0; font-size: 1.02rem; }
+  .cta { margin-top: 32px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    text-decoration: none; font-weight: 600; font-size: .92rem;
+    padding: 11px 22px; border-radius: 10px; transition: transform .15s, box-shadow .2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 8px 24px -8px var(--glow); }
+  .btn-ghost { border: 1px solid var(--border); color: var(--text); background: var(--panel); }
+  .btn:hover { transform: translateY(-3px); }
+
+  /* ---------- sections ---------- */
+  section { padding: 60px 0; }
+  .section-tag {
+    font-family: 'Fira Code', monospace; color: var(--accent);
+    font-size: .85rem; letter-spacing: 1px; text-transform: uppercase;
+  }
+  .section-title { font-size: clamp(1.6rem, 4vw, 2.1rem); font-weight: 700; margin: 6px 0 32px; letter-spacing: -.5px; }
+
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* ---------- about / stats ---------- */
+  .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: start; }
+  @media (max-width: 760px){ .about-grid { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 24px;
+  }
+  .about-card p { color: var(--muted); margin-bottom: 14px; }
+  .about-card strong { color: var(--text); }
+  .codeblock {
+    background: var(--bg-soft); border: 1px solid var(--border); border-radius: 14px;
+    padding: 20px; font-family: 'Fira Code', monospace; font-size: .82rem; line-height: 1.9;
+    overflow-x: auto;
+  }
+  .codeblock .k { color: var(--accent-3); }
+  .codeblock .a { color: var(--accent); }
+  .codeblock .s { color: var(--accent-2); }
+  .codeblock .c { color: #5b6b85; }
+
+  .stat-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-top: 30px; }
+  @media (max-width: 640px){ .stat-row { grid-template-columns: repeat(2,1fr); } }
+  .stat { text-align: center; padding: 18px 8px; background: var(--panel); border:1px solid var(--border); border-radius: 14px; }
+  .stat .n { font-size: 1.9rem; font-weight: 800; color: var(--accent); font-family:'Fira Code',monospace; }
+  .stat .l { font-size: .78rem; color: var(--muted); letter-spacing: .3px; }
+
+  /* ---------- timeline ---------- */
+  .timeline { position: relative; padding-left: 34px; }
+  .timeline::before {
+    content:""; position:absolute; left: 9px; top: 6px; bottom: 6px; width: 2px;
+    background: linear-gradient(var(--accent), var(--accent-3));
+  }
+  .tl-item { position: relative; margin-bottom: 34px; }
+  .tl-item::before {
+    content:""; position:absolute; left: -33px; top: 4px; width: 14px; height: 14px;
+    border-radius: 50%; background: var(--bg); border: 3px solid var(--accent);
+    box-shadow: 0 0 14px var(--glow);
+  }
+  .tl-era { font-family:'Fira Code',monospace; font-size:.8rem; color: var(--accent-2); letter-spacing:.5px; }
+  .tl-item h3 { font-size: 1.2rem; margin: 2px 0 6px; }
+  .tl-item p { color: var(--muted); font-size: .95rem; }
+  .chips { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip {
+    font-family:'Fira Code',monospace; font-size:.72rem; color: var(--muted);
+    background: var(--bg-soft); border:1px solid var(--border); padding: 4px 10px; border-radius: 20px;
+  }
+
+  /* ---------- skills ---------- */
+  .skill-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+  @media (max-width: 760px){ .skill-grid { grid-template-columns: 1fr; } }
+  .skill-card h4 { display:flex; align-items:center; gap:10px; margin-bottom: 14px; font-size: 1.05rem; }
+  .skill-card .dot { width: 9px; height: 9px; border-radius:50%; }
+  .skill-card ul { list-style: none; }
+  .skill-card li { color: var(--muted); font-size: .9rem; padding: 5px 0; border-bottom: 1px dashed var(--border); }
+  .skill-card li:last-child { border: 0; }
+
+  /* ---------- projects ---------- */
+  .proj-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+  @media (max-width: 760px){ .proj-grid { grid-template-columns: 1fr; } }
+  .proj {
+    background: var(--panel); border:1px solid var(--border); border-radius: 16px; padding: 24px;
+    text-decoration: none; color: inherit; display:block; position: relative;
+    transition: transform .18s, border-color .2s, box-shadow .2s;
+  }
+  .proj:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 18px 40px -20px var(--glow); }
+  .proj .ico { font-size: 1.6rem; }
+  .proj h3 { font-size: 1.15rem; margin: 12px 0 8px; }
+  .proj h3 .arrow { color: var(--accent); opacity:0; transition: opacity .2s, transform .2s; display:inline-block; }
+  .proj:hover h3 .arrow { opacity:1; transform: translateX(4px); }
+  .proj p { color: var(--muted); font-size: .9rem; margin-bottom: 14px; }
+  .proj .star { position:absolute; top:22px; right:22px; font-size:.78rem; color: var(--accent-2); font-family:'Fira Code',monospace; }
+
+  /* ---------- contact ---------- */
+  .contact { text-align: center; }
+  .contact .card { padding: 44px 24px; }
+  .contact h2 { font-size: clamp(1.6rem,4vw,2.2rem); margin-bottom: 10px; }
+  .contact p { color: var(--muted); margin-bottom: 26px; }
+  .socials { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+  footer { text-align:center; padding: 40px 0 56px; color: var(--muted); font-size:.82rem; }
+  footer .mono { color: var(--accent-2); }
+  ::selection { background: var(--accent); color:#fff; }
+</style>
+</head>
+<body>
+<div class="grid-overlay"></div>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">minh<span>.</span>tran</div>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#journey">journey</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <img class="avatar" src="https://github.com/minhtran3124.png" alt="Minh Tran" />
+  <h1>Minh <span class="grad">Tran</span></h1>
+  <div class="typed-line"><span id="typed"></span><span class="cursor">▋</span></div>
+  <p class="tagline">From REST APIs &amp; cloud infrastructure to autonomous agents — I build backend systems that scale, and the harnesses that let AI agents ship them safely.</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="https://github.com/minhtran3124" target="_blank">GitHub ↗</a>
+    <a class="btn btn-ghost" href="#projects">View Projects</a>
+    <a class="btn btn-ghost" href="https://www.linkedin.com/in/minh-tran-787097125/" target="_blank">LinkedIn ↗</a>
+  </div>
+</header>
+
+<section id="about" class="wrap reveal">
+  <div class="section-tag">// 01 — about</div>
+  <h2 class="section-title">Who I am</h2>
+  <div class="about-grid">
+    <div class="card about-card">
+      <p>I'm a <strong>Backend &amp; DevOps engineer</strong> who has spent 2026 going deep on <strong>agentic AI</strong>. My foundation is Python web services — FastAPI, Django, Flask — wired to PostgreSQL, Redis and shipped onto AWS with Docker, Kubernetes and CI/CD.</p>
+      <p>Lately I build the layer above the code: <strong>skill harnesses, multi-agent systems and MCP tooling</strong> that carry a change from brainstorm to ship, with guardrails deciding how careful to be at each step.</p>
+      <p style="margin-bottom:0;">⚡ <strong>Fun fact:</strong> Food and Music 🎵 are the reasons to live.</p>
+    </div>
+    <div class="codeblock">
+<span class="k">class</span> <span class="a">MinhTran</span>:<br/>
+&nbsp;&nbsp;role&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <span class="s">"BE · DevOps · AI"</span><br/>
+&nbsp;&nbsp;location&nbsp;&nbsp;= <span class="s">"🌏 Vietnam"</span><br/>
+&nbsp;&nbsp;now&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= [<span class="s">"agents"</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">"harnesses"</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="s">"MCP"</span>]<br/>
+&nbsp;&nbsp;<span class="c"># systems that</span><br/>
+&nbsp;&nbsp;<span class="c"># ship themselves</span>
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat"><div class="n" data-count="49">0</div><div class="l">Repositories</div></div>
+    <div class="stat"><div class="n" data-count="6">0</div><div class="l">Years coding</div></div>
+    <div class="stat"><div class="n" data-count="14">0</div><div class="l">Agent skills built</div></div>
+    <div class="stat"><div class="n" data-count="3">0</div><div class="l">Domains mastered</div></div>
+  </div>
+</section>
+
+<section id="journey" class="wrap reveal">
+  <div class="section-tag">// 02 — journey</div>
+  <h2 class="section-title">How I got here</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-era">PHASE 01 · FOUNDATION</div>
+      <h3>🐍 Backend Engineer</h3>
+      <p>Built REST APIs, authentication, payments and data pipelines. Learned to model data well and keep services clean and testable.</p>
+      <div class="chips"><span class="chip">FastAPI</span><span class="chip">Django</span><span class="chip">Flask</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-era">PHASE 02 · SCALE</div>
+      <h3>🚀 DevOps &amp; Cloud</h3>
+      <p>Took those services to production: blue-green deployments on AWS ECS, EKS clusters, CI/CD pipelines, and load-testing at scale with Locust.</p>
+      <div class="chips"><span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Helm</span><span class="chip">CI/CD</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-era">PHASE 03 · NOW</div>
+      <h3>🤖 Agentic AI Engineer</h3>
+      <p>Building the tooling that lets AI agents do real engineering — risk-gated skill harnesses, multi-agent research systems, and MCP servers.</p>
+      <div class="chips"><span class="chip">Claude Code</span><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">MCP</span><span class="chip">RAG</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="wrap reveal">
+  <div class="section-tag">// 03 — toolkit</div>
+  <h2 class="section-title">What I work with</h2>
+  <div class="skill-grid">
+    <div class="card skill-card">
+      <h4><span class="dot" style="background:var(--accent)"></span> Backend &amp; Data</h4>
+      <ul>
+        <li>Python · FastAPI · Django · Flask</li>
+        <li>PostgreSQL · MySQL · Redis</li>
+        <li>SQLAlchemy · Alembic · pgvector</li>
+        <li>REST APIs · async I/O · auth</li>
+      </ul>
+    </div>
+    <div class="card skill-card">
+      <h4><span class="dot" style="background:var(--accent-2)"></span> DevOps &amp; Cloud</h4>
+      <ul>
+        <li>AWS — ECS · EKS · Lambda · CDK</li>
+        <li>Docker · Kubernetes · Helm</li>
+        <li>CI/CD · GitHub Actions</li>
+        <li>Locust load-testing · Linux</li>
+      </ul>
+    </div>
+    <div class="card skill-card">
+      <h4><span class="dot" style="background:var(--accent-3)"></span> Agentic AI</h4>
+      <ul>
+        <li>Claude Code skills &amp; harnesses</li>
+        <li>LangChain · LangGraph · Deep Agents</li>
+        <li>MCP servers &amp; tooling</li>
+        <li>RAG · embeddings · prompt eng.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="wrap reveal">
+  <div class="section-tag">// 04 — work</div>
+  <h2 class="section-title">Featured projects</h2>
+  <div class="proj-grid">
+    <a class="proj" href="https://github.com/minhtran3124/agent-harness" target="_blank">
+      <span class="star">★ 1</span>
+      <div class="ico">🤖</div>
+      <h3>agent-harness <span class="arrow">→</span></h3>
+      <p>Risk-gated <strong>/skills for Claude Code</strong> — 14 invocable skills that carry a change from brainstorm → ship, with a harness deciding how careful to be at every step.</p>
+      <div class="chips"><span class="chip">Python</span><span class="chip">Claude Code</span><span class="chip">prompt-eng</span></div>
+    </a>
+    <a class="proj" href="https://github.com/minhtran3124/chat-agents" target="_blank">
+      <div class="ico">🧠</div>
+      <h3>chat-agents <span class="arrow">→</span></h3>
+      <p><strong>Deep Agents Research Assistant</strong> — a LangChain Deep Agents demo surfacing planning, subagent spawning and memory on a live dashboard.</p>
+      <div class="chips"><span class="chip">Python</span><span class="chip">LangChain</span><span class="chip">multi-agent</span></div>
+    </a>
+    <a class="proj" href="https://github.com/minhtran3124/travel-pi" target="_blank">
+      <div class="ico">✈️</div>
+      <h3>travel-pi <span class="arrow">→</span></h3>
+      <p><strong>Travel Planner API</strong> — a clean FastAPI booking backend (flights, hotels, bookings) built for frontends to develop against.</p>
+      <div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">uv</span></div>
+    </a>
+    <a class="proj" href="https://github.com/minhtran3124/aws-ecs-green-blue-deployment" target="_blank">
+      <div class="ico">🔄</div>
+      <h3>aws-ecs blue/green <span class="arrow">→</span></h3>
+      <p>Zero-downtime <strong>blue/green deployments</strong> on AWS ECS — the DevOps playbook for shipping to production without flinching.</p>
+      <div class="chips"><span class="chip">AWS</span><span class="chip">ECS</span><span class="chip">CI/CD</span></div>
+    </a>
+  </div>
+  <div style="text-align:center;margin-top:30px;">
+    <a class="btn btn-ghost" href="https://github.com/minhtran3124?tab=repositories&type=source" target="_blank">Browse all 49 repositories ↗</a>
+  </div>
+</section>
+
+<section id="contact" class="wrap reveal contact">
+  <div class="section-tag">// 05 — contact</div>
+  <h2 class="section-title" style="margin-bottom:0;">Let's build something</h2>
+  <div class="card">
+    <h2>Open to backend, DevOps &amp; AI engineering roles 👋</h2>
+    <p>Got an interesting system to scale or an agent to set loose? Let's talk.</p>
+    <div class="socials">
+      <a class="btn btn-primary" href="mailto:tranhuuminh3124@gmail.com">✉️ Email me</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/minh-tran-787097125/" target="_blank">LinkedIn ↗</a>
+      <a class="btn btn-ghost" href="https://github.com/minhtran3124" target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Designed &amp; built by Minh Tran · <span class="mono">backend → devops → agents</span></p>
+</footer>
+
+<script>
+  // typing effect
+  const phrases = [
+    "Backend Engineer",
+    "DevOps & Cloud Engineer",
+    "Agentic AI Builder",
+    "I build systems that ship themselves."
+  ];
+  const el = document.getElementById('typed');
+  let p = 0, c = 0, deleting = false;
+  function tick() {
+    const word = phrases[p];
+    el.textContent = word.slice(0, c);
+    if (!deleting && c < word.length) { c++; setTimeout(tick, 70); }
+    else if (!deleting && c === word.length) { deleting = true; setTimeout(tick, 1600); }
+    else if (deleting && c > 0) { c--; setTimeout(tick, 35); }
+    else { deleting = false; p = (p + 1) % phrases.length; setTimeout(tick, 300); }
+  }
+  tick();
+
+  // scroll reveal
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(s => obs.observe(s));
+
+  // count-up stats
+  const counters = document.querySelectorAll('.stat .n');
+  const cObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const node = e.target, target = +node.dataset.count;
+      let n = 0; const step = Math.max(1, Math.ceil(target / 40));
+      const run = () => { n += step; if (n >= target) { node.textContent = target; } else { node.textContent = n; requestAnimationFrame(run); } };
+      run(); cObs.unobserve(node);
+    });
+  }, { threshold: 0.6 });
+  counters.forEach(c => cObs.observe(c));
+</script>
+</body>
+</html>
