@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://github.com/minhtran3124">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1200&color=1E90FF&center=true&vCenter=true&width=620&height=70&lines=Hi%2C+I'm+Minh+Tran+%F0%9F%91%8B;Backend+Engineer+%E2%86%92+DevOps+%E2%86%92+Agentic+AI;I+build+systems+that+ship+themselves." alt="Minh Tran" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1200&color=1E90FF&center=true&vCenter=true&width=620&height=70&lines=Hi%2C+I'm+Minh+Tran+%F0%9F%91%8B;BBackend+Engineer+%E2%86%92+DevOps+%E2%86%92+Agentic+AI;I+build+systems+that+ship+themselves." alt="Minh Tran" />
 </a>
 
 <p>
