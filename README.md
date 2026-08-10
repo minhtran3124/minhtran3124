@@ -112,10 +112,10 @@ Risk-gated **/skills for Claude Code** — 14 invocable skills that carry a chan
 </td>
 <td width="50%" valign="top">
 
-#### 🔄 [aws-ecs-green-blue-deployment](https://github.com/minhtran3124/aws-ecs-green-blue-deployment)
-Zero-downtime **blue/green deployments** on AWS ECS — the DevOps playbook for shipping without flinching.
+#### 🧭 [Brichan](https://github.com/minhtran3124/Brichan)
+**AI Chief of Staff for coding agents** — bounded assignments, Herdr orchestration, verified outputs & durable project memory in your repo.
 <br/>
-`AWS` · `ECS` · `CI/CD`
+`Python` · `agent-orchestration` · `Codex`
 
 </td>
 </tr>
