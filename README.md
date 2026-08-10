@@ -131,8 +131,8 @@ Risk-gated **/skills for Claude Code** — 14 invocable skills that carry a chan
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=minhtran3124&show_icons=true&hide_border=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=minhtran3124&layout=compact&hide_border=true&theme=tokyonight&langs_count=8" alt="top langs" />
+<img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=minhtran3124&theme=tokyonight" alt="stats" />
+<img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=minhtran3124&theme=tokyonight" alt="top langs" />
 
 <br/>
 
